@@ -29,6 +29,8 @@ class DataSelectViewController: UIViewController,UITableViewDataSource,UITableVi
         
         if saveData.array(forKey: "idle") == nil{
             
+            //画面遷移
+            performSegue(withIdentifier: "addDataSegue", sender: nil)
             
             
         }else{
@@ -90,6 +92,13 @@ class DataSelectViewController: UIViewController,UITableViewDataSource,UITableVi
             
             }
           }
+    
+    @IBAction func toAddData(){
+        
+        //画面遷移
+        performSegue(withIdentifier: "addDataSegue", sender: nil)
+        
+    }
     
 
     /*

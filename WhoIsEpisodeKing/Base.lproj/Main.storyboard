@@ -727,6 +727,7 @@
                                         <barButtonItem key="leftBarButtonItem" image="plus" catalog="system" id="pBU-ZI-A5z">
                                             <color key="tintColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <connections>
+                                                <action selector="toAddData" destination="9ia-ey-IqJ" id="KYW-DV-gDc"/>
                                                 <segue destination="q2k-JJ-w5N" kind="show" identifier="addDataSegue" id="uMo-vd-FR7"/>
                                             </connections>
                                         </barButtonItem>
