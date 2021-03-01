@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Start View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WhoIsEpisodeKing" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="StartViewController" customModule="WhoIsEpisodeKing" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -26,24 +26,12 @@
                                     <constraint firstAttribute="height" constant="100" id="mEM-CA-ZVM"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Futura-CondensedMedium" family="Futura" pointSize="43"/>
-                                <state key="normal" title="NEW">
+                                <state key="normal" title="START">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <segue destination="u07-ie-2aC" kind="show" id="qpu-Nx-bM0"/>
                                 </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K40-au-Fli">
-                                <rect key="frame" x="87" y="613" width="240" height="100"/>
-                                <color key="backgroundColor" red="0.1050468162" green="0.6668912172" blue="0.89593964820000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="HLa-Bt-9i5"/>
-                                    <constraint firstAttribute="height" constant="100" id="Uag-9X-P3k"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Futura-CondensedMedium" family="Futura" pointSize="43"/>
-                                <state key="normal" title="CONTINU">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="title.png" translatesAutoresizingMaskIntoConstraints="NO" id="1Rj-yH-ndK">
                                 <rect key="frame" x="87" y="228" width="240" height="240"/>
@@ -58,21 +46,20 @@
                         <constraints>
                             <constraint firstItem="aeM-6b-O7F" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="100" id="S6C-Qq-w4x"/>
                             <constraint firstItem="1Rj-yH-ndK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="duq-Ay-bW2"/>
-                            <constraint firstItem="K40-au-Fli" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fLF-RD-QKe"/>
-                            <constraint firstItem="K40-au-Fli" firstAttribute="top" secondItem="aeM-6b-O7F" secondAttribute="bottom" constant="15" id="j2b-Q1-UVt"/>
                             <constraint firstItem="aeM-6b-O7F" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ma6-QF-ZKX"/>
                             <constraint firstItem="aeM-6b-O7F" firstAttribute="top" secondItem="1Rj-yH-ndK" secondAttribute="bottom" constant="30" id="n1i-AL-NUj"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="zDm-mo-Lkq"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="528.98550724637687" y="93.75"/>
         </scene>
-        <!--View Controller-->
+        <!--User Registration View Controller-->
         <scene sceneID="mZB-pz-jYE">
             <objects>
-                <viewController id="u07-ie-2aC" sceneMemberID="viewController">
+                <viewController id="u07-ie-2aC" customClass="UserRegistrationViewController" customModule="WhoIsEpisodeKing" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WRL-ZF-1Uh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -238,12 +225,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pau-4N-TUR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1286.9565217391305" y="93.75"/>
+            <point key="canvasLocation" x="1287" y="94"/>
         </scene>
-        <!--View Controller-->
+        <!--Game View Controller-->
         <scene sceneID="hc0-Z4-Q0o">
             <objects>
-                <viewController id="d7I-S7-657" sceneMemberID="viewController">
+                <viewController id="d7I-S7-657" customClass="GameViewController" customModule="WhoIsEpisodeKing" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="e1n-25-SDs">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -346,10 +333,10 @@
             </objects>
             <point key="canvasLocation" x="528.98550724637687" y="799.55357142857144"/>
         </scene>
-        <!--View Controller-->
+        <!--Voting View Controller-->
         <scene sceneID="McL-P4-4ge">
             <objects>
-                <viewController id="ZBI-JF-8dL" sceneMemberID="viewController">
+                <viewController id="ZBI-JF-8dL" customClass="VotingViewController" customModule="WhoIsEpisodeKing" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cUC-Dz-i8E">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -462,10 +449,10 @@
             </objects>
             <point key="canvasLocation" x="1286.9565217391305" y="799.55357142857144"/>
         </scene>
-        <!--View Controller-->
+        <!--Point View Controller-->
         <scene sceneID="Fn2-Ll-POE">
             <objects>
-                <viewController id="aof-SO-Uyk" sceneMemberID="viewController">
+                <viewController id="aof-SO-Uyk" customClass="PointViewController" customModule="WhoIsEpisodeKing" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wch-Xq-zGq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -578,10 +565,10 @@
             </objects>
             <point key="canvasLocation" x="2011.594202898551" y="799.55357142857144"/>
         </scene>
-        <!--View Controller-->
+        <!--Punishment Game View Controller-->
         <scene sceneID="ZVu-1h-UAA">
             <objects>
-                <viewController id="Oky-OG-iBq" sceneMemberID="viewController">
+                <viewController id="Oky-OG-iBq" customClass="PunishmentGameViewController" customModule="WhoIsEpisodeKing" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tPY-qJ-OJd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -673,10 +660,10 @@
             </objects>
             <point key="canvasLocation" x="2715.9420289855075" y="799.55357142857144"/>
         </scene>
-        <!--View Controller-->
+        <!--Data Select View Controller-->
         <scene sceneID="BRh-KN-LEm">
             <objects>
-                <viewController id="9ia-ey-IqJ" sceneMemberID="viewController">
+                <viewController id="9ia-ey-IqJ" customClass="DataSelectViewController" customModule="WhoIsEpisodeKing" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="a3s-mS-o2X">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -751,10 +738,10 @@
             </objects>
             <point key="canvasLocation" x="2044.9275362318842" y="93.75"/>
         </scene>
-        <!--View Controller-->
+        <!--Add Data View Controller-->
         <scene sceneID="r6f-DV-eYq">
             <objects>
-                <viewController id="q2k-JJ-w5N" sceneMemberID="viewController">
+                <viewController id="q2k-JJ-w5N" customClass="AddDataViewController" customModule="WhoIsEpisodeKing" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ioa-qx-NhI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
