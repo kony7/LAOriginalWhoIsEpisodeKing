@@ -7,7 +7,7 @@
 
 import UIKit
 
-class user{
+class user: NSObject, NSCoding{
     
     var name: String!
     var color: String!
@@ -19,6 +19,21 @@ class user{
         self.color = color
         self.point = point
         
+    }
+    
+    required init?(coder: NSCoder){
+        
+        name = (coder.decodeObject(forKey: "name") as? String) ?? ""
+        color = (coder.decodeObject(forKey: "color") as? String) ?? ""
+        point = (coder.decodeInteger(forKey: "point"))
+        
+    }
+    
+    func encode(with coder: NSCoder) {
+        
+        coder.encode(name,forKey: "name")
+        coder.encode(color,forKey: "color")
+        coder.encode(point,forKey: "point")
     }
     
     func getImage() -> UIImage{
