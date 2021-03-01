@@ -27,6 +27,8 @@
 		99DB5DA025ECC76200EABAC0 /* VotingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DB5D9F25ECC76200EABAC0 /* VotingViewController.swift */; };
 		99DB5DA525ECC77000EABAC0 /* PunishmentGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DB5DA425ECC77000EABAC0 /* PunishmentGameViewController.swift */; };
 		99DB5DAA25ECC7BA00EABAC0 /* PointViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DB5DA925ECC7BA00EABAC0 /* PointViewController.swift */; };
+		99DB5DAF25ECD7FE00EABAC0 /* UserClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DB5DAE25ECD7FE00EABAC0 /* UserClass.swift */; };
+		99DB5DB725ECD87F00EABAC0 /* IdleClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DB5DB625ECD87F00EABAC0 /* IdleClass.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +75,8 @@
 		99DB5D9F25ECC76200EABAC0 /* VotingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VotingViewController.swift; sourceTree = "<group>"; };
 		99DB5DA425ECC77000EABAC0 /* PunishmentGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PunishmentGameViewController.swift; sourceTree = "<group>"; };
 		99DB5DA925ECC7BA00EABAC0 /* PointViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointViewController.swift; sourceTree = "<group>"; };
+		99DB5DAE25ECD7FE00EABAC0 /* UserClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserClass.swift; sourceTree = "<group>"; };
+		99DB5DB625ECD87F00EABAC0 /* IdleClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdleClass.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +146,8 @@
 				99DB5D9F25ECC76200EABAC0 /* VotingViewController.swift */,
 				99DB5DA425ECC77000EABAC0 /* PunishmentGameViewController.swift */,
 				99DB5DA925ECC7BA00EABAC0 /* PointViewController.swift */,
+				99DB5DAE25ECD7FE00EABAC0 /* UserClass.swift */,
+				99DB5DB625ECD87F00EABAC0 /* IdleClass.swift */,
 			);
 			path = WhoIsEpisodeKing;
 			sourceTree = "<group>";
@@ -301,12 +307,14 @@
 				99DB5D8C25ECC71D00EABAC0 /* UserRegistrationViewController.swift in Sources */,
 				99DB5DA525ECC77000EABAC0 /* PunishmentGameViewController.swift in Sources */,
 				99C718A425EC79FB0070804E /* ViewController.swift in Sources */,
+				99DB5DAF25ECD7FE00EABAC0 /* UserClass.swift in Sources */,
 				99DB5D8725ECC70C00EABAC0 /* StartViewController.swift in Sources */,
 				99C718A025EC79FB0070804E /* AppDelegate.swift in Sources */,
 				99DB5DAA25ECC7BA00EABAC0 /* PointViewController.swift in Sources */,
 				99DB5D9B25ECC75000EABAC0 /* GameViewController.swift in Sources */,
 				99DB5DA025ECC76200EABAC0 /* VotingViewController.swift in Sources */,
 				99DB5D9125ECC73100EABAC0 /* AddDataViewController.swift in Sources */,
+				99DB5DB725ECD87F00EABAC0 /* IdleClass.swift in Sources */,
 				99DB5D9625ECC74100EABAC0 /* DataSelectViewController.swift in Sources */,
 				99C718A225EC79FB0070804E /* SceneDelegate.swift in Sources */,
 			);

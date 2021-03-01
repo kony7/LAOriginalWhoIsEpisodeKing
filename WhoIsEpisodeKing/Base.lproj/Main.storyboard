@@ -74,6 +74,9 @@
                                             <constraint firstAttribute="width" constant="50" id="JB6-PI-Mcd"/>
                                             <constraint firstAttribute="height" constant="50" id="trL-yz-9w5"/>
                                         </constraints>
+                                        <connections>
+                                            <action selector="redButton" destination="u07-ie-2aC" eventType="touchUpInside" id="mYi-Vy-PD9"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PyE-7H-hHY">
                                         <rect key="frame" x="58" y="0.0" width="50" height="50"/>
@@ -82,6 +85,9 @@
                                             <constraint firstAttribute="height" constant="50" id="FWy-HC-igR"/>
                                             <constraint firstAttribute="width" constant="50" id="ewT-Pl-qwM"/>
                                         </constraints>
+                                        <connections>
+                                            <action selector="blueButton" destination="u07-ie-2aC" eventType="touchUpInside" id="7vV-TQ-2J8"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kzH-gW-Jrx">
                                         <rect key="frame" x="116" y="0.0" width="50" height="50"/>
@@ -90,6 +96,9 @@
                                             <constraint firstAttribute="width" constant="50" id="MYq-hz-B0V"/>
                                             <constraint firstAttribute="height" constant="50" id="cnb-0s-7yk"/>
                                         </constraints>
+                                        <connections>
+                                            <action selector="greenButton" destination="u07-ie-2aC" eventType="touchUpInside" id="Zmy-G3-Hgd"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zwx-3l-T0O">
                                         <rect key="frame" x="174" y="0.0" width="50" height="50"/>
@@ -98,6 +107,9 @@
                                             <constraint firstAttribute="height" constant="50" id="Wi4-4N-xha"/>
                                             <constraint firstAttribute="width" constant="50" id="ewi-N2-HFj"/>
                                         </constraints>
+                                        <connections>
+                                            <action selector="yellowButton" destination="u07-ie-2aC" eventType="touchUpInside" id="Hlc-gG-ob7"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pko-dd-3SV">
                                         <rect key="frame" x="232" y="0.0" width="50" height="50"/>
@@ -106,6 +118,9 @@
                                             <constraint firstAttribute="height" constant="50" id="Ryj-cC-gvM"/>
                                             <constraint firstAttribute="width" constant="50" id="tBP-Xm-7Uj"/>
                                         </constraints>
+                                        <connections>
+                                            <action selector="purpleButton" destination="u07-ie-2aC" eventType="touchUpInside" id="bUF-Qn-5za"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p1y-9z-afJ">
                                         <rect key="frame" x="290" y="0.0" width="50" height="50"/>
@@ -114,6 +129,9 @@
                                             <constraint firstAttribute="height" constant="50" id="CYe-SI-mqa"/>
                                             <constraint firstAttribute="width" constant="50" id="qAv-Jg-j1b"/>
                                         </constraints>
+                                        <connections>
+                                            <action selector="pinkButton" destination="u07-ie-2aC" eventType="touchUpInside" id="8FW-WY-YEa"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jZk-Pl-Nud">
                                         <rect key="frame" x="348" y="0.0" width="50" height="50"/>
@@ -122,6 +140,9 @@
                                             <constraint firstAttribute="width" constant="50" id="5cV-xr-XHM"/>
                                             <constraint firstAttribute="height" constant="50" id="Svf-a3-4vw"/>
                                         </constraints>
+                                        <connections>
+                                            <action selector="orangeButton" destination="u07-ie-2aC" eventType="touchUpInside" id="P5E-GV-T5h"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -142,6 +163,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
+                                    <action selector="saveUserInformation" destination="u07-ie-2aC" eventType="touchUpInside" id="K0G-52-wUa"/>
                                     <segue destination="9ia-ey-IqJ" kind="show" id="7qN-yA-WUj"/>
                                 </connections>
                             </button>
@@ -222,6 +244,16 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="PFn-BM-wbj"/>
+                    <connections>
+                        <outlet property="blueButton" destination="PyE-7H-hHY" id="icb-Ql-TUw"/>
+                        <outlet property="greenButton" destination="kzH-gW-Jrx" id="wng-cz-GhD"/>
+                        <outlet property="orangeButton" destination="jZk-Pl-Nud" id="NRE-bF-RPz"/>
+                        <outlet property="pinkButton" destination="p1y-9z-afJ" id="J5q-u8-4ze"/>
+                        <outlet property="purpleButton" destination="Pko-dd-3SV" id="y6j-a9-aZK"/>
+                        <outlet property="redButton" destination="eJ0-6o-9Uh" id="zfF-FP-bed"/>
+                        <outlet property="table" destination="pEj-NL-7aP" id="y8d-55-wNI"/>
+                        <outlet property="userNameTextField" destination="Yzv-L8-eQz" id="4Oi-75-aL5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pau-4N-TUR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
