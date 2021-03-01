@@ -27,7 +27,7 @@ class DataSelectViewController: UIViewController,UITableViewDataSource,UITableVi
         table.dataSource = self
         table.delegate = self
         
-        if saveData.array(forKey: "idle") != nil{
+        if saveData.array(forKey: "idle") == nil{
             
             
             
@@ -58,7 +58,7 @@ class DataSelectViewController: UIViewController,UITableViewDataSource,UITableVi
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     
         //"Cell"というIDのセルを取得
-           let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")
 
         //セル内のタグをつけたパーツにアクセス
         let groupName = cell?.contentView.viewWithTag(1) as! UILabel
@@ -90,7 +90,6 @@ class DataSelectViewController: UIViewController,UITableViewDataSource,UITableVi
             
             }
           }
-      }
     
 
     /*

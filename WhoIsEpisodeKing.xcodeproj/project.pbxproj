@@ -17,7 +17,6 @@
 		99C718C225EC79FF0070804E /* WhoIsEpisodeKingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C718C125EC79FF0070804E /* WhoIsEpisodeKingUITests.swift */; };
 		99C718D325EC828D0070804E /* title.png in Resources */ = {isa = PBXBuildFile; fileRef = 99C718D225EC828C0070804E /* title.png */; };
 		99DB5D7225EC96E400EABAC0 /* 03SmartFontUI.otf in Resources */ = {isa = PBXBuildFile; fileRef = 99DB5D7125EC96E400EABAC0 /* 03SmartFontUI.otf */; };
-		99DB5D7D25ECB85500EABAC0 /* circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 99DB5D7C25ECB85400EABAC0 /* circle.png */; };
 		99DB5D8225ECC33600EABAC0 /* homeiconWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = 99DB5D8125ECC33500EABAC0 /* homeiconWhite.png */; };
 		99DB5D8725ECC70C00EABAC0 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DB5D8625ECC70C00EABAC0 /* StartViewController.swift */; };
 		99DB5D8C25ECC71D00EABAC0 /* UserRegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DB5D8B25ECC71D00EABAC0 /* UserRegistrationViewController.swift */; };
@@ -65,7 +64,6 @@
 		99C718C325EC79FF0070804E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		99C718D225EC828C0070804E /* title.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = title.png; sourceTree = "<group>"; };
 		99DB5D7125EC96E400EABAC0 /* 03SmartFontUI.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = 03SmartFontUI.otf; sourceTree = "<group>"; };
-		99DB5D7C25ECB85400EABAC0 /* circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circle.png; sourceTree = "<group>"; };
 		99DB5D8125ECC33500EABAC0 /* homeiconWhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = homeiconWhite.png; sourceTree = "<group>"; };
 		99DB5D8625ECC70C00EABAC0 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		99DB5D8B25ECC71D00EABAC0 /* UserRegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRegistrationViewController.swift; sourceTree = "<group>"; };
@@ -128,7 +126,6 @@
 			isa = PBXGroup;
 			children = (
 				99DB5D8125ECC33500EABAC0 /* homeiconWhite.png */,
-				99DB5D7C25ECB85400EABAC0 /* circle.png */,
 				99C718D225EC828C0070804E /* title.png */,
 				99DB5D7125EC96E400EABAC0 /* 03SmartFontUI.otf */,
 				99C7189F25EC79FB0070804E /* AppDelegate.swift */,
@@ -277,7 +274,6 @@
 				99C718AC25EC79FE0070804E /* LaunchScreen.storyboard in Resources */,
 				99C718A925EC79FE0070804E /* Assets.xcassets in Resources */,
 				99DB5D8225ECC33600EABAC0 /* homeiconWhite.png in Resources */,
-				99DB5D7D25ECB85500EABAC0 /* circle.png in Resources */,
 				99C718D325EC828D0070804E /* title.png in Resources */,
 				99C718A725EC79FB0070804E /* Main.storyboard in Resources */,
 			);

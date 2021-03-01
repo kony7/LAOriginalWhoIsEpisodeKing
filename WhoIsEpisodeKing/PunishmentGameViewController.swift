@@ -15,6 +15,12 @@ class PunishmentGameViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func toHome(){
+        
+        self.navigationController?.popToRootViewController(animated: true)
+        
+    }
+    
 
     /*
     // MARK: - Navigation
