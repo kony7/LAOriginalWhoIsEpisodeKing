@@ -13,4 +13,18 @@ class user{
     var color: String!
     var point: Int!
     
+    init(name: String, color: String, point: Int){
+        
+        self.name = name
+        self.color = color
+        self.point = point
+        
+    }
+    
+    func getImage() -> UIImage{
+        
+        return UIImage(named: color)!
+        
+    }
+    
 }

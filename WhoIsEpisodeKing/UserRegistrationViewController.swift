@@ -36,10 +36,37 @@ class UserRegistrationViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func addInformation() {
+    
+        //テキストフィールドに書かれている内容を配列に追加
+        if userNameTextField.text == ""{
+            
+            let alert: UIAlertController = UIAlertController(title: "No data", message: "Plese write your name!", preferredStyle: .alert)
+            
+            let cancelAction: UIAlertAction = UIAlertAction(title: "Cancel", style: .cancel, handler:{
+                  // ボタンが押された時の処理を書く（クロージャ実装）
+                  (action: UIAlertAction!) -> Void in
+                 
+              })
+            
+            alert.addAction(cancelAction)
+            
+            present(alert, animated: true, completion: nil)
+            
+        }else if let userName = userNameTextField.text{
+            
+            userInformationArray.append(user(name:userName, color: "red", point: 0))
+            
+        }
+        
+
+        
+    }
+    
+    
     @IBAction func saveUserInformation() {
         
-        //テキストフィールドに書かれている内容を
-        
+      
     }
     
 //    func changeButtonsColor(){

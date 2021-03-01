@@ -219,6 +219,9 @@
                                 <state key="normal">
                                     <imageReference key="image" image="plus" catalog="system" symbolScale="large" renderingMode="original"/>
                                 </state>
+                                <connections>
+                                    <action selector="addInformation" destination="u07-ie-2aC" eventType="touchUpInside" id="2Zz-Et-BZS"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fuS-wY-zb7"/>
