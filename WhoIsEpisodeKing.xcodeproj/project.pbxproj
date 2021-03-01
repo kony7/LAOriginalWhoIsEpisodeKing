@@ -19,6 +19,14 @@
 		99DB5D7225EC96E400EABAC0 /* 03SmartFontUI.otf in Resources */ = {isa = PBXBuildFile; fileRef = 99DB5D7125EC96E400EABAC0 /* 03SmartFontUI.otf */; };
 		99DB5D7D25ECB85500EABAC0 /* circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 99DB5D7C25ECB85400EABAC0 /* circle.png */; };
 		99DB5D8225ECC33600EABAC0 /* homeiconWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = 99DB5D8125ECC33500EABAC0 /* homeiconWhite.png */; };
+		99DB5D8725ECC70C00EABAC0 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DB5D8625ECC70C00EABAC0 /* StartViewController.swift */; };
+		99DB5D8C25ECC71D00EABAC0 /* UserRegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DB5D8B25ECC71D00EABAC0 /* UserRegistrationViewController.swift */; };
+		99DB5D9125ECC73100EABAC0 /* AddDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DB5D9025ECC73100EABAC0 /* AddDataViewController.swift */; };
+		99DB5D9625ECC74100EABAC0 /* DataSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DB5D9525ECC74100EABAC0 /* DataSelectViewController.swift */; };
+		99DB5D9B25ECC75000EABAC0 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DB5D9A25ECC75000EABAC0 /* GameViewController.swift */; };
+		99DB5DA025ECC76200EABAC0 /* VotingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DB5D9F25ECC76200EABAC0 /* VotingViewController.swift */; };
+		99DB5DA525ECC77000EABAC0 /* PunishmentGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DB5DA425ECC77000EABAC0 /* PunishmentGameViewController.swift */; };
+		99DB5DAA25ECC7BA00EABAC0 /* PointViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DB5DA925ECC7BA00EABAC0 /* PointViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +65,14 @@
 		99DB5D7125EC96E400EABAC0 /* 03SmartFontUI.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = 03SmartFontUI.otf; sourceTree = "<group>"; };
 		99DB5D7C25ECB85400EABAC0 /* circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circle.png; sourceTree = "<group>"; };
 		99DB5D8125ECC33500EABAC0 /* homeiconWhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = homeiconWhite.png; sourceTree = "<group>"; };
+		99DB5D8625ECC70C00EABAC0 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		99DB5D8B25ECC71D00EABAC0 /* UserRegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRegistrationViewController.swift; sourceTree = "<group>"; };
+		99DB5D9025ECC73100EABAC0 /* AddDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDataViewController.swift; sourceTree = "<group>"; };
+		99DB5D9525ECC74100EABAC0 /* DataSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSelectViewController.swift; sourceTree = "<group>"; };
+		99DB5D9A25ECC75000EABAC0 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		99DB5D9F25ECC76200EABAC0 /* VotingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VotingViewController.swift; sourceTree = "<group>"; };
+		99DB5DA425ECC77000EABAC0 /* PunishmentGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PunishmentGameViewController.swift; sourceTree = "<group>"; };
+		99DB5DA925ECC7BA00EABAC0 /* PointViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +134,14 @@
 				99C718A825EC79FE0070804E /* Assets.xcassets */,
 				99C718AA25EC79FE0070804E /* LaunchScreen.storyboard */,
 				99C718AD25EC79FE0070804E /* Info.plist */,
+				99DB5D8625ECC70C00EABAC0 /* StartViewController.swift */,
+				99DB5D8B25ECC71D00EABAC0 /* UserRegistrationViewController.swift */,
+				99DB5D9025ECC73100EABAC0 /* AddDataViewController.swift */,
+				99DB5D9525ECC74100EABAC0 /* DataSelectViewController.swift */,
+				99DB5D9A25ECC75000EABAC0 /* GameViewController.swift */,
+				99DB5D9F25ECC76200EABAC0 /* VotingViewController.swift */,
+				99DB5DA425ECC77000EABAC0 /* PunishmentGameViewController.swift */,
+				99DB5DA925ECC7BA00EABAC0 /* PointViewController.swift */,
 			);
 			path = WhoIsEpisodeKing;
 			sourceTree = "<group>";
@@ -274,8 +298,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99DB5D8C25ECC71D00EABAC0 /* UserRegistrationViewController.swift in Sources */,
+				99DB5DA525ECC77000EABAC0 /* PunishmentGameViewController.swift in Sources */,
 				99C718A425EC79FB0070804E /* ViewController.swift in Sources */,
+				99DB5D8725ECC70C00EABAC0 /* StartViewController.swift in Sources */,
 				99C718A025EC79FB0070804E /* AppDelegate.swift in Sources */,
+				99DB5DAA25ECC7BA00EABAC0 /* PointViewController.swift in Sources */,
+				99DB5D9B25ECC75000EABAC0 /* GameViewController.swift in Sources */,
+				99DB5DA025ECC76200EABAC0 /* VotingViewController.swift in Sources */,
+				99DB5D9125ECC73100EABAC0 /* AddDataViewController.swift in Sources */,
+				99DB5D9625ECC74100EABAC0 /* DataSelectViewController.swift in Sources */,
 				99C718A225EC79FB0070804E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
