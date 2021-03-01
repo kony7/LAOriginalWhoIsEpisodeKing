@@ -8,12 +8,26 @@
 import UIKit
 
 class AddDataViewController: UIViewController {
+    
+    //Userdefaultを宣言
+    var saveData: UserDefaults = UserDefaults.standard
+    
+    //テキストフィールドの宣言
+    @IBOutlet var groupNameTextField: UITextField!
+    @IBOutlet var nameTextField: UITextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
+    
+    @IBAction func cancel(_ sender: UIBarButtonItem) {
+        
+        self.dismiss(animated: true, completion: nil)
+        
+    }
+    
     
 
     /*

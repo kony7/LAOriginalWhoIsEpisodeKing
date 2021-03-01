@@ -164,7 +164,7 @@
                                 </state>
                                 <connections>
                                     <action selector="saveUserInformation" destination="u07-ie-2aC" eventType="touchUpInside" id="K0G-52-wUa"/>
-                                    <segue destination="9ia-ey-IqJ" kind="show" id="7qN-yA-WUj"/>
+                                    <segue destination="9ia-ey-IqJ" kind="show" identifier="set" id="7qN-yA-WUj"/>
                                 </connections>
                             </button>
                             <navigationBar contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pJ7-2k-ZGE">
@@ -512,6 +512,9 @@
                                             <constraint firstAttribute="height" constant="50" id="eWR-r9-V52"/>
                                         </constraints>
                                         <state key="normal" image="homeiconWhite.png"/>
+                                        <connections>
+                                            <action selector="toHome" destination="aof-SO-Uyk" eventType="touchUpInside" id="tnD-cc-AF4"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.1050468162" green="0.6668912172" blue="0.89593964820000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -618,6 +621,9 @@
                                             <constraint firstAttribute="height" constant="50" id="MYQ-KT-nWT"/>
                                         </constraints>
                                         <state key="normal" image="homeiconWhite.png"/>
+                                        <connections>
+                                            <action selector="toHome" destination="Oky-OG-iBq" eventType="touchUpInside" id="1d4-Ku-qCR"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="PUNISHMENT GAME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j9K-EZ-2Ht">
                                         <rect key="frame" x="76" y="49" width="300" height="60"/>
@@ -715,7 +721,7 @@
                                         <barButtonItem key="leftBarButtonItem" image="plus" catalog="system" id="pBU-ZI-A5z">
                                             <color key="tintColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <connections>
-                                                <segue destination="q2k-JJ-w5N" kind="presentation" id="uMo-vd-FR7"/>
+                                                <segue destination="q2k-JJ-w5N" kind="show" identifier="addDataSegue" id="uMo-vd-FR7"/>
                                             </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="START" style="done" id="ZY1-ME-dyB">
@@ -729,23 +735,23 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="124" id="Zhh-qZ-dQW">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="124" id="Zhh-qZ-dQW">
                                         <rect key="frame" x="0.0" y="28" width="414" height="124"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Zhh-qZ-dQW" id="Y0m-ez-VTi">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="124"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jvp-ST-amk">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="3" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jvp-ST-amk">
                                                     <rect key="frame" x="9" y="5" width="112" height="114"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Group Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hyo-i6-2GZ">
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Group Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hyo-i6-2GZ">
                                                     <rect key="frame" x="137" y="11" width="257" height="32"/>
                                                     <fontDescription key="fontDescription" name="Futura-CondensedMedium" family="Futura" pointSize="17"/>
                                                     <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Person Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yog-7y-OoP">
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Person Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yog-7y-OoP">
                                                     <rect key="frame" x="137" y="44" width="257" height="62"/>
                                                     <fontDescription key="fontDescription" name="Futura-CondensedMedium" family="Futura" pointSize="35"/>
                                                     <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -768,6 +774,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="lvO-Y0-IKz"/>
+                    <connections>
+                        <outlet property="table" destination="aA5-EX-rLt" id="Rgb-kb-h7a"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dE0-kN-uAv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -791,6 +800,9 @@
                                     <navigationItem title="ADD DATA" id="Wvc-gE-zfd">
                                         <barButtonItem key="leftBarButtonItem" image="trash" catalog="system" id="dMm-57-sdS">
                                             <color key="tintColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <connections>
+                                                <action selector="cancel:" destination="q2k-JJ-w5N" id="UkC-zm-q3H"/>
+                                            </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="START" image="checkmark" catalog="system" style="done" id="T5q-kw-lxG">
                                             <color key="tintColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -860,6 +872,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="MVh-0t-ntg"/>
+                    <connections>
+                        <outlet property="groupNameTextField" destination="OdN-l3-iMW" id="xm6-fb-gVI"/>
+                        <outlet property="nameTextField" destination="y19-az-6m0" id="DRi-pp-eFt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t5S-1k-QQK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

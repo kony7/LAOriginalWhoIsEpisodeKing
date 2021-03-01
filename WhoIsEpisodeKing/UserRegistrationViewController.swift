@@ -59,14 +59,32 @@ class UserRegistrationViewController: UIViewController {
             
         }
         
-
+    func performSegueToResult(){
+            
+     //画面遷移
+     performSegue(withIdentifier: "set", sender: nil)
         
+      }
     }
     
     
     @IBAction func saveUserInformation() {
         
+        saveData.setValue(userInformationArray, forKey: "user")
       
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "user"{
+          
+          //画面遷移を変数に入れる
+            let viewController = segue.destination as! DataSelectViewController
+          
+          //遷移先のsaveDataにこっちのsavedateを代入する
+            viewController.saveData = self.saveData
+        }
+        
     }
     
 //    func changeButtonsColor(){
