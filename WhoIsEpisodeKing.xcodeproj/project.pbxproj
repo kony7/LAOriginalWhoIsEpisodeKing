@@ -15,6 +15,9 @@
 		99C718AC25EC79FE0070804E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99C718AA25EC79FE0070804E /* LaunchScreen.storyboard */; };
 		99C718B725EC79FE0070804E /* WhoIsEpisodeKingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C718B625EC79FE0070804E /* WhoIsEpisodeKingTests.swift */; };
 		99C718C225EC79FF0070804E /* WhoIsEpisodeKingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C718C125EC79FF0070804E /* WhoIsEpisodeKingUITests.swift */; };
+		99C718D325EC828D0070804E /* title.png in Resources */ = {isa = PBXBuildFile; fileRef = 99C718D225EC828C0070804E /* title.png */; };
+		99C718D825EC844F0070804E /* 03SmartFontUI.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 99C718D725EC844F0070804E /* 03SmartFontUI.ttf */; };
+		99C718DD25EC85640070804E /* 03スマートフォントUI.otf in Resources */ = {isa = PBXBuildFile; fileRef = 99C718DC25EC85640070804E /* 03スマートフォントUI.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		99C718BD25EC79FF0070804E /* WhoIsEpisodeKingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WhoIsEpisodeKingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		99C718C125EC79FF0070804E /* WhoIsEpisodeKingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhoIsEpisodeKingUITests.swift; sourceTree = "<group>"; };
 		99C718C325EC79FF0070804E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		99C718D225EC828C0070804E /* title.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = title.png; sourceTree = "<group>"; };
+		99C718D725EC844F0070804E /* 03SmartFontUI.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = 03SmartFontUI.ttf; sourceTree = "<group>"; };
+		99C718DC25EC85640070804E /* 03スマートフォントUI.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "03スマートフォントUI.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +105,9 @@
 		99C7189E25EC79FB0070804E /* WhoIsEpisodeKing */ = {
 			isa = PBXGroup;
 			children = (
+				99C718DC25EC85640070804E /* 03スマートフォントUI.otf */,
+				99C718D725EC844F0070804E /* 03SmartFontUI.ttf */,
+				99C718D225EC828C0070804E /* title.png */,
 				99C7189F25EC79FB0070804E /* AppDelegate.swift */,
 				99C718A125EC79FB0070804E /* SceneDelegate.swift */,
 				99C718A325EC79FB0070804E /* ViewController.swift */,
@@ -231,8 +240,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99C718DD25EC85640070804E /* 03スマートフォントUI.otf in Resources */,
 				99C718AC25EC79FE0070804E /* LaunchScreen.storyboard in Resources */,
 				99C718A925EC79FE0070804E /* Assets.xcassets in Resources */,
+				99C718D825EC844F0070804E /* 03SmartFontUI.ttf in Resources */,
+				99C718D325EC828D0070804E /* title.png in Resources */,
 				99C718A725EC79FB0070804E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
