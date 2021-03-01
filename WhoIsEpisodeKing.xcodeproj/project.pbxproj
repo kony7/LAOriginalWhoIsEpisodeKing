@@ -18,6 +18,7 @@
 		99C718D325EC828D0070804E /* title.png in Resources */ = {isa = PBXBuildFile; fileRef = 99C718D225EC828C0070804E /* title.png */; };
 		99DB5D7225EC96E400EABAC0 /* 03SmartFontUI.otf in Resources */ = {isa = PBXBuildFile; fileRef = 99DB5D7125EC96E400EABAC0 /* 03SmartFontUI.otf */; };
 		99DB5D7D25ECB85500EABAC0 /* circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 99DB5D7C25ECB85400EABAC0 /* circle.png */; };
+		99DB5D8225ECC33600EABAC0 /* homeiconWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = 99DB5D8125ECC33500EABAC0 /* homeiconWhite.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		99C718D225EC828C0070804E /* title.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = title.png; sourceTree = "<group>"; };
 		99DB5D7125EC96E400EABAC0 /* 03SmartFontUI.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = 03SmartFontUI.otf; sourceTree = "<group>"; };
 		99DB5D7C25ECB85400EABAC0 /* circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circle.png; sourceTree = "<group>"; };
+		99DB5D8125ECC33500EABAC0 /* homeiconWhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = homeiconWhite.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 		99C7189E25EC79FB0070804E /* WhoIsEpisodeKing */ = {
 			isa = PBXGroup;
 			children = (
+				99DB5D8125ECC33500EABAC0 /* homeiconWhite.png */,
 				99DB5D7C25ECB85400EABAC0 /* circle.png */,
 				99C718D225EC828C0070804E /* title.png */,
 				99DB5D7125EC96E400EABAC0 /* 03SmartFontUI.otf */,
@@ -243,6 +246,7 @@
 				99DB5D7225EC96E400EABAC0 /* 03SmartFontUI.otf in Resources */,
 				99C718AC25EC79FE0070804E /* LaunchScreen.storyboard in Resources */,
 				99C718A925EC79FE0070804E /* Assets.xcassets in Resources */,
+				99DB5D8225ECC33600EABAC0 /* homeiconWhite.png in Resources */,
 				99DB5D7D25ECB85500EABAC0 /* circle.png in Resources */,
 				99C718D325EC828D0070804E /* title.png in Resources */,
 				99C718A725EC79FB0070804E /* Main.storyboard in Resources */,
