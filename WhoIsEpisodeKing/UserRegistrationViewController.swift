@@ -142,13 +142,15 @@ class UserRegistrationViewController: UIViewController, UITableViewDataSource,UI
     
     @IBAction func saveUserInformation() {
         
-        saveData.setValue(userArray, forKey: "user")
+        let data = try! NSKeyedArchiver.archivedData(withRootObject: userArray, requiringSecureCoding: false)
+        UserDefaults.standard.set(data, forKey: "user")
+        UserDefaults.standard.synchronize()
       
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if segue.identifier == "user"{
+        if segue.identifier == "set"{
           
           //画面遷移を変数に入れる
             let viewController = segue.destination as! DataSelectViewController

@@ -45,7 +45,7 @@ class DataSelectViewController: UIViewController,UITableViewDataSource,UITableVi
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         //セル数の指定
-        idleArray = saveData.array(forKey: "idle") as! [idle]
+        idleArray = saveData.object(forKey: "idle") as! [idle]
         if idleArray.count > 0{
             
             return  idleArray.count
