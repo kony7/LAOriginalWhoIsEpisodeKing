@@ -891,6 +891,7 @@
                     <navigationItem key="navigationItem" id="MVh-0t-ntg"/>
                     <connections>
                         <outlet property="groupNameTextField" destination="OdN-l3-iMW" id="xm6-fb-gVI"/>
+                        <outlet property="idleImageView" destination="KyV-gM-ZRN" id="0Il-TZ-JXw"/>
                         <outlet property="nameTextField" destination="y19-az-6m0" id="DRi-pp-eFt"/>
                     </connections>
                 </viewController>
