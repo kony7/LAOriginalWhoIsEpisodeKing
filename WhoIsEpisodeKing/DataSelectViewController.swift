@@ -90,7 +90,15 @@ class DataSelectViewController: UIViewController,UITableViewDataSource,UITableVi
             //遷移先のsaveDataにこっちのsavedateを代入する
             viewController.saveData = self.saveData
             
-            }
+            }else if segue.identifier == "gameStart"{
+                
+                //画面遷移を変数に入れる
+                let viewController = segue.destination as! GameViewController
+                
+                //遷移先のsaveDataにこっちのsavedateを代入する
+                viewController.saveData = self.saveData
+                
+                }
           }
     
     @IBAction func toAddData(){

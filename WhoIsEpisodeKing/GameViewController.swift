@@ -8,8 +8,20 @@
 import UIKit
 
 class GameViewController: UIViewController {
+    
+    //Userdefaultを宣言
+    var saveData: UserDefaults = UserDefaults.standard
+
+    //このゲームの中で使うユーザーデータを格納する配列を宣言
+    var userArray:[user] = []
+    
+    //アイドル情報を追加する配列
+    var idleArray:[idle] = []
 
     override func viewDidLoad() {
+        
+        
+        
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.

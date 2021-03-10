@@ -20,9 +20,6 @@ class AddDataViewController: UIViewController,UIImagePickerControllerDelegate, U
     //画像を一時的に保存するUIImageView
     var image: UIImage!
     
-    //アイドル情報を追加する配列
-    var idleArray:[idle] = []
-    
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -66,8 +63,11 @@ class AddDataViewController: UIViewController,UIImagePickerControllerDelegate, U
             present(alert, animated: true, completion: nil)
             
         }else if let idleName = nameTextField.text, let groupName = groupNameTextField.text{
-            
+            //え？ここ取得するの？保存するの？もわからなくなってきたので、これはもう続きを12日にまわします
+            if let data = UserDefaults.standard.object(forKey: "idle") as? Data,
+               let idleArray = NSKeyedArchiver.unarchiveObject(with: data) as? [idle]{
             idleArray.append(idle(group: groupName, name: idleName, imageName: <#T##String#>))
+            }
         
     }
     
