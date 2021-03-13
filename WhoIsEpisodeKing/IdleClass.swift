@@ -11,13 +11,13 @@ class idle: NSObject, NSCoding{
     
     var group: String!
     var name: String!
-    var imageName: String!
+//    var image: NSData!
     
-    init(group: String, name: String, imageName:String){
+    init(group: String, name: String, image:NSData){
         
         self.group = group
         self.name = name
-        self.imageName = imageName
+//        self.image = image
         
     }
     
@@ -25,7 +25,7 @@ class idle: NSObject, NSCoding{
         
         group = (coder.decodeObject(forKey: "group") as? String) ?? ""
         name = (coder.decodeObject(forKey: "name") as? String) ?? ""
-        imageName = (coder.decodeObject(forKey: "image") as? String) ?? ""
+//        image = (coder.decodeObject(forKey: "image") as? NSData)
         
     }
     
@@ -33,14 +33,8 @@ class idle: NSObject, NSCoding{
         
         coder.encode(group,forKey: "group")
         coder.encode(name,forKey: "name")
-        coder.encode(imageName,forKey: "image")
+//        coder.encode(image,forKey: "image")
 
-    }
-    
-    func getImage() -> UIImage{
-        
-        return UIImage(named: imageName)!
-        
     }
     
 }

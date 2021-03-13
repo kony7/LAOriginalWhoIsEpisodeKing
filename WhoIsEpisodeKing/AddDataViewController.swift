@@ -48,6 +48,8 @@ class AddDataViewController: UIViewController,UIImagePickerControllerDelegate, U
         
         //UIImageのデータをStringの文字列にして保存するかNSDataの型をカスタムクラスに追加してimageNameを消す
         
+        
+        
         if nameTextField.text == "" || groupNameTextField.text == ""{
             
             let alert: UIAlertController = UIAlertController(title: "No data", message: "Plese write your name!", preferredStyle: .alert)
@@ -62,14 +64,15 @@ class AddDataViewController: UIViewController,UIImagePickerControllerDelegate, U
             
             present(alert, animated: true, completion: nil)
             
-        }else if let idleName = nameTextField.text, let groupName = groupNameTextField.text{
-            //え？ここ取得するの？保存するの？もわからなくなってきたので、これはもう続きを12日にまわします
-            if let data = UserDefaults.standard.object(forKey: "idle") as? Data,
-               let idleArray = NSKeyedArchiver.unarchiveObject(with: data) as? [idle]{
-            idleArray.append(idle(group: groupName, name: idleName, imageName: <#T##String#>))
-            }
-        
-    }
+        }
+//            else if let idleName = nameTextField.text, let groupName = groupNameTextField.text{
+//            //え？ここ取得するの？保存するの？もわからなくなってきたので、これはもう続きを12日にまわします
+//            if let data = UserDefaults.standard.object(forKey: "idle") as? Data,
+//               let idleArray = NSKeyedArchiver.unarchiveObject(with: data) as? [idle]{
+//            idleArray.append(idle(group: groupName, name: idleName, image: <#T##String#>))
+//            }
+//
+//    }
     
 
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
@@ -81,13 +84,11 @@ class AddDataViewController: UIViewController,UIImagePickerControllerDelegate, U
     }
     
     
-    @IBAction func cancel(_ sender: UIBarButtonItem) {
+        func cancel(_ sender: UIBarButtonItem) {
         
         self.dismiss(animated: true, completion: nil)
         
     }
-    
-    
 
     /*
     // MARK: - Navigation
@@ -99,4 +100,5 @@ class AddDataViewController: UIViewController,UIImagePickerControllerDelegate, U
     }
     */
 
+}
 }

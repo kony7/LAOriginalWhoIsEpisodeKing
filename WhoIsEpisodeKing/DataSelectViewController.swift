@@ -26,6 +26,10 @@ class DataSelectViewController: UIViewController,UITableViewDataSource,UITableVi
 
         table.dataSource = self
         table.delegate = self
+       
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
         
         if saveData.array(forKey: "idle") == nil{
             
@@ -65,14 +69,14 @@ class DataSelectViewController: UIViewController,UITableViewDataSource,UITableVi
         //セル内のタグをつけたパーツにアクセス
         let groupName = cell?.contentView.viewWithTag(1) as! UILabel
         let name = cell?.contentView.viewWithTag(2) as! UILabel
-        let idleImage = cell?.contentView.viewWithTag(3) as! UIImageView
+//        let idleImage = cell?.contentView.viewWithTag(3) as! UIImageView
         
         let serialNumber:Int! = indexPath.row
         
         //パーツにテキストと画像を反映
         groupName.text = idleArray[serialNumber].group
         name.text = idleArray[serialNumber].name
-        idleImage.image = idleArray[serialNumber].getImage()
+//        idleImage.image = idleArray[serialNumber].getImage()
        
         return cell!
            
