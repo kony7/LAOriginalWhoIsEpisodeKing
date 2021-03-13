@@ -822,11 +822,14 @@
                                         <barButtonItem key="leftBarButtonItem" image="trash" catalog="system" id="dMm-57-sdS">
                                             <color key="tintColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <connections>
-                                                <action selector="cancel:" destination="q2k-JJ-w5N" id="UkC-zm-q3H"/>
+                                                <action selector="goReturn" destination="q2k-JJ-w5N" id="dqV-i2-a9K"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="START" image="checkmark" catalog="system" style="done" id="T5q-kw-lxG">
+                                        <barButtonItem key="rightBarButtonItem" title="done" image="checkmark" catalog="system" style="done" id="T5q-kw-lxG">
                                             <color key="tintColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <connections>
+                                                <action selector="doneButton" destination="q2k-JJ-w5N" id="y6G-sR-l70"/>
+                                            </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
@@ -841,6 +844,9 @@
                                 <state key="normal">
                                     <imageReference key="backgroundImage" image="person.crop.circle.badge.plus" catalog="system" symbolScale="large" renderingMode="original"/>
                                 </state>
+                                <connections>
+                                    <action selector="imageSelectButton" destination="q2k-JJ-w5N" eventType="touchUpInside" id="0Ox-w7-q94"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Group Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F2X-PG-bS3">
                                 <rect key="frame" x="30" y="336" width="80" height="25"/>

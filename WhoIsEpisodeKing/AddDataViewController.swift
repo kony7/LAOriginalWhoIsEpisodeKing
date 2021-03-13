@@ -20,10 +20,26 @@ class AddDataViewController: UIViewController,UIImagePickerControllerDelegate, U
     //画像を一時的に保存するUIImageView
     var image: UIImage!
     
+    //ideleArrayをこのView内で使うためのArray
+    var idleArray:[idle] = []
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        func loadidleArray() -> [idle] {
+            guard let data = UserDefaults.standard.data(forKey: "idle") else {
+                return []
+            }
+            guard let array = try? NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(data) as? [idle]
+                else {
+                    return []
+            }
+            idleArray = array
+            return array
+        }
+        
     }
     
     @IBAction func imageSelectButton(){
@@ -65,14 +81,25 @@ class AddDataViewController: UIViewController,UIImagePickerControllerDelegate, U
             present(alert, animated: true, completion: nil)
             
         }
-//            else if let idleName = nameTextField.text, let groupName = groupNameTextField.text{
-//            //え？ここ取得するの？保存するの？もわからなくなってきたので、これはもう続きを12日にまわします
-//            if let data = UserDefaults.standard.object(forKey: "idle") as? Data,
-//               let idleArray = NSKeyedArchiver.unarchiveObject(with: data) as? [idle]{
-//            idleArray.append(idle(group: groupName, name: idleName, image: <#T##String#>))
-//            }
-//
-//    }
+            else if let idleName = nameTextField.text, let groupName = groupNameTextField.text{
+                
+                idleArray.append(idle(group: groupName, name: idleName))
+                
+                let data = try! NSKeyedArchiver.archivedData(withRootObject: idleArray, requiringSecureCoding: false)
+                UserDefaults.standard.set(data, forKey: "idle")
+                UserDefaults.standard.synchronize()
+                
+            }
+        
+        cancel()
+
+    }
+    
+    @IBAction func goReturn(){
+        
+        cancel()
+        
+    }
     
 
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
@@ -84,9 +111,19 @@ class AddDataViewController: UIViewController,UIImagePickerControllerDelegate, U
     }
     
     
-        func cancel(_ sender: UIBarButtonItem) {
+        func cancel() {
         
         self.dismiss(animated: true, completion: nil)
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+          
+          //画面遷移を変数に入れる
+            let viewController = segue.destination as! DataSelectViewController
+          
+          //遷移先のsaveDataにこっちのsavedateを代入する
+            viewController.saveData = self.saveData
         
     }
 
@@ -101,4 +138,4 @@ class AddDataViewController: UIViewController,UIImagePickerControllerDelegate, U
     */
 
 }
-}
+

@@ -31,16 +31,20 @@ class DataSelectViewController: UIViewController,UITableViewDataSource,UITableVi
     
     override func viewDidAppear(_ animated: Bool) {
         
-        if saveData.array(forKey: "idle") == nil{
+        func loadIdleArray() -> [idle] {
+            guard let data = UserDefaults.standard.data(forKey: "idle") else {
+                //画面遷移
+                performSegue(withIdentifier: "addDataSegue", sender: nil)
+                return []
+            }
+            guard let idlearray = try? NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(data) as? [idle]
+                else {
+                    return []
+            }
             
-            //画面遷移
-            performSegue(withIdentifier: "addDataSegue", sender: nil)
-            
-            
-        }else{
-            
-           idleArray = saveData.array(forKey: "idle") as! [idle]
-            
+            idleArray = idlearray
+            return idlearray
+      
         }
         
     }
@@ -49,7 +53,6 @@ class DataSelectViewController: UIViewController,UITableViewDataSource,UITableVi
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         //セル数の指定
-        idleArray = saveData.object(forKey: "idle") as! [idle]
         if idleArray.count > 0{
             
             return  idleArray.count

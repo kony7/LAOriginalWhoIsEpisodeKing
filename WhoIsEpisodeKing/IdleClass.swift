@@ -13,7 +13,7 @@ class idle: NSObject, NSCoding{
     var name: String!
 //    var image: NSData!
     
-    init(group: String, name: String, image:NSData){
+    init(group: String, name: String){
         
         self.group = group
         self.name = name
