@@ -29,7 +29,7 @@ class AddDataViewController: UIViewController,UIImagePickerControllerDelegate, U
         // Do any additional setup after loading the view.
         
         func loadidleArray() -> [idle] {
-            guard let data = UserDefaults.standard.data(forKey: "idle") else {
+            guard let data = saveData.data(forKey: "idle") else {
                 return []
             }
             guard let array = try? NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(data) as? [idle]
@@ -68,7 +68,7 @@ class AddDataViewController: UIViewController,UIImagePickerControllerDelegate, U
         
         if nameTextField.text == "" || groupNameTextField.text == ""{
             
-            let alert: UIAlertController = UIAlertController(title: "No data", message: "Plese write your name!", preferredStyle: .alert)
+            let alert: UIAlertController = UIAlertController(title: "No data", message: "Plese write!", preferredStyle: .alert)
             
             let cancelAction: UIAlertAction = UIAlertAction(title: "Cancel", style: .cancel, handler:{
                   // ボタンが押された時の処理を書く（クロージャ実装）
@@ -86,8 +86,8 @@ class AddDataViewController: UIViewController,UIImagePickerControllerDelegate, U
                 idleArray.append(idle(group: groupName, name: idleName))
                 
                 let data = try! NSKeyedArchiver.archivedData(withRootObject: idleArray, requiringSecureCoding: false)
-                UserDefaults.standard.set(data, forKey: "idle")
-                UserDefaults.standard.synchronize()
+                saveData.set(data, forKey: "idle")
+                saveData.synchronize()
                 
             }
         

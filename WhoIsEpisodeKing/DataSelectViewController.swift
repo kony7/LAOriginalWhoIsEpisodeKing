@@ -23,8 +23,7 @@ class DataSelectViewController: UIViewController,UITableViewDataSource,UITableVi
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         func loadIdleArray() -> [idle] {
-            guard let data = UserDefaults.standard.data(forKey: "idle") else {
-               
+            guard let data = saveData.data(forKey: "idle") else {
                 return []
             }
             guard let idlearray = try? NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(data) as? [idle]
@@ -34,7 +33,7 @@ class DataSelectViewController: UIViewController,UITableViewDataSource,UITableVi
             
             idleArray = idlearray
             return idlearray
-      
+            
         }
 
         table.dataSource = self
@@ -57,15 +56,8 @@ class DataSelectViewController: UIViewController,UITableViewDataSource,UITableVi
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         //セル数の指定
-        if idleArray.count > 0{
-            
-            return  idleArray.count
+        return  idleArray.count
 
-        }else{
-            
-            return 0
-           
-        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -79,6 +71,9 @@ class DataSelectViewController: UIViewController,UITableViewDataSource,UITableVi
 //        let idleImage = cell?.contentView.viewWithTag(3) as! UIImageView
         
         let serialNumber:Int! = indexPath.row
+        
+        print("アイドル配列の中身は")
+        print(idleArray[serialNumber])
         
         //パーツにテキストと画像を反映
         groupName.text = idleArray[serialNumber].group
