@@ -18,6 +18,7 @@ class DataSelectViewController: UIViewController,UITableViewDataSource,UITableVi
     //アイドル情報を追加する配列
     var idleArray:[idle] = []
     
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -32,6 +33,7 @@ class DataSelectViewController: UIViewController,UITableViewDataSource,UITableVi
             }
             
             idleArray = idlearray
+            
             return idlearray
             
         }
@@ -49,6 +51,8 @@ class DataSelectViewController: UIViewController,UITableViewDataSource,UITableVi
         performSegue(withIdentifier: "addDataSegue", sender: nil)
             
         }
+        
+        table.reloadData()
         
     }
     
