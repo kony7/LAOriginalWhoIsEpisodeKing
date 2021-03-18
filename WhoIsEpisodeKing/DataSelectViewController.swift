@@ -22,19 +22,9 @@ class DataSelectViewController: UIViewController,UITableViewDataSource,UITableVi
         
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
-
-        table.dataSource = self
-        table.delegate = self
-       
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        
         func loadIdleArray() -> [idle] {
             guard let data = UserDefaults.standard.data(forKey: "idle") else {
-                //画面遷移
-                performSegue(withIdentifier: "addDataSegue", sender: nil)
+               
                 return []
             }
             guard let idlearray = try? NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(data) as? [idle]
@@ -45,6 +35,20 @@ class DataSelectViewController: UIViewController,UITableViewDataSource,UITableVi
             idleArray = idlearray
             return idlearray
       
+        }
+
+        table.dataSource = self
+        table.delegate = self
+       
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+        if idleArray == []{
+ 
+        //画面遷移
+        performSegue(withIdentifier: "addDataSegue", sender: nil)
+            
         }
         
     }
