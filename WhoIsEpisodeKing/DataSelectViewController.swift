@@ -60,7 +60,8 @@ class DataSelectViewController: UIViewController,UITableViewDataSource,UITableVi
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         //セル数の指定
-        return  idleArray.count
+//        return  idleArray.count
+        return 10
 
     }
     
