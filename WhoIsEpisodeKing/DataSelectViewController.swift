@@ -50,6 +50,22 @@ class DataSelectViewController: UIViewController,UITableViewDataSource,UITableVi
         //画面遷移
         performSegue(withIdentifier: "addDataSegue", sender: nil)
             
+        }else{
+        
+        func loadIdleArray() -> [idle] {
+            guard let data = saveData.data(forKey: "idle") else {
+                return []
+            }
+            guard let idlearray = try? NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(data) as? [idle]
+                else {
+                    return []
+            }
+            
+            idleArray = idlearray
+            
+            return idlearray
+            
+        }
         }
         
         table.reloadData()
@@ -77,8 +93,8 @@ class DataSelectViewController: UIViewController,UITableViewDataSource,UITableVi
         
         let serialNumber:Int! = indexPath.row
         
-        print("アイドル配列の中身は")
-        print(idleArray[serialNumber])
+//        print("アイドル配列の中身は")
+//        print(idleArray[0].group ?? String())
         
         //パーツにテキストと画像を反映
         groupName.text = idleArray[serialNumber].group
