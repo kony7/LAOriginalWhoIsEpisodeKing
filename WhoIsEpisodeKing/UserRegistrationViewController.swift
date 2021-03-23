@@ -143,8 +143,8 @@ class UserRegistrationViewController: UIViewController, UITableViewDataSource,UI
     @IBAction func saveUserInformation() {
         
         let data = try! NSKeyedArchiver.archivedData(withRootObject: userArray, requiringSecureCoding: false)
-        UserDefaults.standard.set(data, forKey: "user")
-        UserDefaults.standard.synchronize()
+        saveData.set(data, forKey: "user")
+        saveData.synchronize()
       
     }
     

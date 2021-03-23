@@ -28,17 +28,8 @@ class AddDataViewController: UIViewController,UIImagePickerControllerDelegate, U
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        func loadidleArray() -> [idle] {
-            guard let data = saveData.data(forKey: "idle") else {
-                return []
-            }
-            guard let array = try? NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(data) as? [idle]
-                else {
-                    return []
-            }
-            idleArray = array
-            return array
-        }
+        loadidleArray()
+
         
     }
     
@@ -99,6 +90,19 @@ class AddDataViewController: UIViewController,UIImagePickerControllerDelegate, U
         
         cancel()
         
+    }
+    
+    @discardableResult
+    func loadidleArray() -> [idle] {
+        guard let data = saveData.data(forKey: "idle") else {
+            return []
+        }
+        guard let array = try? NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(data) as? [idle]
+            else {
+                return []
+        }
+        idleArray = array
+        return array
     }
     
 

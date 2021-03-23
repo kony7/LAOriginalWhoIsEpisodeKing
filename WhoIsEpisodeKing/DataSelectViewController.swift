@@ -23,20 +23,8 @@ class DataSelectViewController: UIViewController,UITableViewDataSource,UITableVi
         
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        func loadIdleArray() -> [idle] {
-            guard let data = saveData.data(forKey: "idle") else {
-                return []
-            }
-            guard let idlearray = try? NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(data) as? [idle]
-                else {
-                    return []
-            }
-            
-            idleArray = idlearray
-            
-            return idlearray
-            
-        }
+        
+        loadIdleArray()
 
         table.dataSource = self
         table.delegate = self
@@ -44,30 +32,8 @@ class DataSelectViewController: UIViewController,UITableViewDataSource,UITableVi
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        
-        if idleArray == []{
- 
-        //画面遷移
-        performSegue(withIdentifier: "addDataSegue", sender: nil)
-            
-        }else{
-        
-        func loadIdleArray() -> [idle] {
-            guard let data = saveData.data(forKey: "idle") else {
-                return []
-            }
-            guard let idlearray = try? NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(data) as? [idle]
-                else {
-                    return []
-            }
-            
-            idleArray = idlearray
-            
-            return idlearray
-            
-        }
-        }
-        
+          
+        loadIdleArray()
         table.reloadData()
         
     }
@@ -76,8 +42,8 @@ class DataSelectViewController: UIViewController,UITableViewDataSource,UITableVi
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         //セル数の指定
-//        return  idleArray.count
-        return 10
+        return  idleArray.count
+//        return 10
 
     }
     
@@ -132,6 +98,22 @@ class DataSelectViewController: UIViewController,UITableViewDataSource,UITableVi
         
         //画面遷移
         performSegue(withIdentifier: "addDataSegue", sender: nil)
+        
+    }
+    
+    @discardableResult
+    func loadIdleArray() -> [idle] {
+        guard let data = saveData.data(forKey: "idle") else {
+            return []
+        }
+        guard let idlearray = try? NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(data) as? [idle]
+            else {
+                return []
+        }
+        
+        idleArray = idlearray
+        
+        return idlearray
         
     }
     
